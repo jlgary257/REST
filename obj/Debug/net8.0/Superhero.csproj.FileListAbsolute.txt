@@ -31,3 +31,4 @@ C:\Users\Joel.Santhana\Desktop\csBeginner\Superhero\obj\Debug\net8.0\refint\Supe
 C:\Users\Joel.Santhana\Desktop\csBeginner\Superhero\obj\Debug\net8.0\Superhero.pdb
 C:\Users\Joel.Santhana\Desktop\csBeginner\Superhero\obj\Debug\net8.0\Superhero.genruntimeconfig.cache
 C:\Users\Joel.Santhana\Desktop\csBeginner\Superhero\obj\Debug\net8.0\ref\Superhero.dll
+C:\Users\Joel.Santhana\Desktop\csBeginner\Superhero\obj\Debug\net8.0\Superhero.sourcelink.json
