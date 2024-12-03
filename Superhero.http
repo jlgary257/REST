@@ -1,6 +1,5 @@
-@Superhero_HostAddress = http://localhost:5250
+### Get All
+GET http://localhost:5001/api/superhero
 
-GET {{Superhero_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
+### Get one
+GET http://localhost:5001/api/superhero/2

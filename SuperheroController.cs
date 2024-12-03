@@ -19,5 +19,13 @@ namespace Superhero.Controllers
         {
             return Ok(Superheroes);
         }
+
+        [HttpGet]
+        [Route("{Id}")]
+        public ActionResult<SuperheroItem> Get(int Id)
+        {
+            var superheroItem = Superheroes.Find(x => x.Id == Id);
+            return superheroItem == null ? NotFound() : Ok(superheroItem);
+        }
     }
 }
