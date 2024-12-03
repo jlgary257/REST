@@ -12,3 +12,15 @@ Content-Type: application/json
     "id": 4,
     "name": "Flash"
 }
+
+### Update
+PUT http://localhost:5001/api/superhero
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Aquaman"
+}
+
+### Delete one
+DELETE http://localhost:5001/api/superhero/0

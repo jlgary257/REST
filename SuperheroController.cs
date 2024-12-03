@@ -44,5 +44,36 @@ namespace Superhero.Controllers
                 return Created(resourceUrl, sprheroItem);
             }
         }
+
+        [HttpPut]
+        public ActionResult Put(SuperheroItem superheroItem)
+        {
+            var existingSuperheroItem = Superheroes.Find(x => x.Id == superheroItem.Id);
+            if (existingSuperheroItem == null)
+            {
+                return BadRequest("cannot update a non existing item.");
+            }
+            else
+            {
+                existingSuperheroItem.Name = superheroItem.Name;
+                return Ok();
+            }
+        }
+
+        [HttpDelete]
+        [Route("{Id}")]
+        public ActionResult Delete(int Id)
+        {
+            var superheroItem = Superheroes.Find(x => x.Id == Id);
+            if (superheroItem == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                Superheroes.Remove(superheroItem);
+                return NoContent();
+            }
+        }
     }
 }
