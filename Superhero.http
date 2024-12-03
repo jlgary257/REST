@@ -3,3 +3,12 @@ GET http://localhost:5001/api/superhero
 
 ### Get one
 GET http://localhost:5001/api/superhero/2
+
+### Create one
+POST http://localhost:5001/api/superhero
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Flash"
+}

@@ -1,2 +1,7 @@
-### Get All
-GET https://localhost:5001/api/superhero
+### Create one
+POST http://localhost:5001/api/superhero
+Content-Type: application/json
+{
+    "id": 4,
+    "name": "Flash"
+}

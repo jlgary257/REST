@@ -27,5 +27,22 @@ namespace Superhero.Controllers
             var superheroItem = Superheroes.Find(x => x.Id == Id);
             return superheroItem == null ? NotFound() : Ok(superheroItem);
         }
+
+        [HttpPost]
+        public ActionResult Post(SuperheroItem sprheroItem)
+        {
+            var existingSuperheroItem = Superheroes.Find(x => x.Id == sprheroItem.Id);
+            if (existingSuperheroItem != null)
+            {
+                return Conflict("Cannot create the Id because it already exists.");
+
+            }
+            else
+            {
+                Superheroes.Add(sprheroItem);
+                var resourceUrl = Request.Path.ToString() + '/' + sprheroItem.Id;
+                return Created(resourceUrl, sprheroItem);
+            }
+        }
     }
 }
